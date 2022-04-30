@@ -1,20 +1,20 @@
-/* general*/
+/* general */
 body, textarea{
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
 }
 
-h1, h2, h3{
+h1,h2,h3{
     color: #333;
 }
 
 p{
-    color: #70747a;
+    color: #70747A;
 }
-/* navbar */
+
 .navbar-container{
-    background-color: #232a31;
+    background-color: #232A31;
     width: 100%;
     height: 80px;
     padding: 0 2em;
@@ -30,59 +30,55 @@ p{
 nav{
     position: relative;
 }
-/* header p:nth-child() */
 
-.nav-items{
-    position: absolute;
-    /* top: ; */
-    /* bottom */
-    /* left */
-    right: 0; 
-    margin: 0;
+.nav-itens{
     list-style: none;
+    position: absolute;
+    right: 0;
+    margin: 0;
     display: inline-block;
     height: 80px;
     line-height: 80px;
 }
-/* organiza as linha e deixa centralizada se colocar do mesmo tamanho q o padding do navbar container */
 
-.nav-items li{
+.nav-itens li{
     display: inline-block;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-left: 25px;
+    color: aliceblue;
 }
 
-.nav-items li a{
-    color: #fff;
-    text-decoration: none ;
-    transition: .5s;
-} 
+.nav-itens li a{
+    color: aliceblue;
+    text-decoration: none;
+}
 
-.nav-items li a:hover{
-    color: #ccc;
+.nav-itens li a:hover{
+    color: antiquewhite;
+    transition: .5s;
 }
 
 .default-btn{
     padding: 15px 20px;
-    background-color: #2eab23;
+    background-color: #2CC76A;
     border-radius: 5px;
     color: #fff;
 }
 
 .default-btn:hover{
-    background-color: #22bb5f;
+    background-color: #22BB5F;
     color: #fff;
 }
 
 .main-banner{
     background-image: url('../img/mainbanner.png');
-    padding: 10em 0;
-    background-size: cover;
+    padding: 12em 0;
     background-position: center;
+    background-size: cover;
     position: relative;
 }
 
-.main-banner h1, .main-banner p {
+.main-banner h1, .main-banner p{
     color: #fff;
     text-align: center;
     font-weight: bold;
@@ -94,4 +90,171 @@ nav{
 
 .main-banner p{
     font-size: 32px;
+}
+
+/* Início especiabilidades */
+
+.specialties-container{
+    padding: 5em 0;
+}
+
+.specialties-container ul{
+    display: flex;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.specialties-container ul li{
+    flex: 1 1 200px;
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.fas{
+    font-size: 60px;
+    margin-bottom: 15px;   
+}
+
+.fa-shield-alt{
+    color: #2CC76A;
+}
+
+.fa-rocket{
+    color: orangered;
+}
+
+.fa-comments{
+    color: red;
+}
+
+.specialties-container ul li h3{
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.specialties-container ul li p{
+    line-height: 24px;
+    color: #70747A;
+}
+
+/* preços */
+
+.pricing-container{
+    padding-bottom: 5em;
+    text-align: center;
+}
+
+.pricing-container h2{
+    font-size: 36px;
+    margin-top: o;
+}
+
+.pricing-container p{
+    font-size: 20px;
+}
+
+.plans-container{
+    display: flex;
+    /* space btween usa o espaço do elemento pai para distribuir os filhos de forma igual */
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 90%;
+    margin-left: auto;
+    margin-right:auto ;
+    margin: 59px;
+}
+
+.plan{
+    /* flex grow,
+     flex shrink,
+     flex basis*/
+    flex: 1 1 200px;
+    max-width:275px ;
+    margin: 0 auto;
+}
+
+.plan ul{
+    padding: 0;
+}
+
+.plan li {
+    list-style: none ;
+    height: 50px;
+    line-height: 50px;
+    background-color: #d7dde5;
+    color: #333;
+}
+
+.plan .price{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #22BB5F;
+    color: #fff;
+    text-align: center;
+    line-height: 120px;
+    font-size: 18px;
+    position: relative;
+    margin: 0 auto -50px;
+}
+
+.plan .plan-name {
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #000;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.plan .plan-btn{
+    background-color: #2CC76A;
+    color: #fff;
+    font-size: 24px;
+    height: 75px;
+    line-height: 75px;
+    cursor: pointer;
+}
+
+.plan .recomended{
+    background-color: rgb(214, 19, 19);
+}
+
+/* buscar domínio */
+
+.searchdomain-container{
+    background-color: #232A31;
+    text-align: center;
+    padding: 5em 0;
+}
+.searchdomain-container h2{
+    color: #fff;
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.searchdomain-container p{
+    color: rgb(237, 237, 237);
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.searchdomain-container input{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.searchdomain-container input[type=text] {
+    margin-bottom: 25px;
+    width: 60%;
+    padding: 20px;
+    font-size: 20px;
 }
